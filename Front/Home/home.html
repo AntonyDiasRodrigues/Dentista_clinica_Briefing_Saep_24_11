@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dentista</title>
+  </head>
+  <body>
+    <header>
+      <button id="logout" type="button">Sair</button>
+      <h1>Seja Bem Vindo!!!</h1>
+      <h2></h2>
+    </header>
+    <button command="show-modal" commandfor="cadastrar_paciente">
+      + de Pacientes
+    </button>
+    <dialog id="cadastrar_paciente">
+      <button command="close" commandfor="cadastrar_paciente">
+        X de Pacientes
+      </button>
+      <form id="cad_paciente">
+        <input type="text" id="nome_paciente" placeholder="Insira o nome" />
+        <input type="text" id="cpf_paciente" placeholder="CPF" />
+        <button id="enviar_paciente">Cadastrar Paciente</button>
+      </form>
+    </dialog>
+
+    <button command="show-modal" commandfor="cadastrar_procedimento">
+      + de procedimentos
+    </button>
+    <dialog id="cadastrar_procedimento">
+      <button command="close" commandfor="cadastrar_procedimento">
+        X de procedimentos
+      </button>
+      <form id="cad_procedimentos">
+        <input
+          type="text"
+          id="nome_procedimento"
+          placeholder="Insiro o nome do procedimento"
+        />
+        <input type="number" id="valor_procedimento" placeholder="preço" />
+        <button id="enviar_procedimento">Cadastrar procedimento</button>
+      </form>
+    </dialog>
+
+    <button command="show-modal" commandfor="cadastrar_consulta">
+      + de consultas
+    </button>
+    <dialog id="cadastrar_consulta">
+      <button command="close" commandfor="cadastrar_consulta">
+        X de consultas
+      </button>
+      <form id="cad_consulta">
+        <input
+          id="data_consulta"
+          type="datetime-local"
+          name="party-date"
+          min="2026-11-01T08:30"
+          
+        />
+        <select name="" id="id_procedimento"></select>
+        <select name="" id="id_paciente"></select>
+        <button id="enviar_consulta">Cadastrar consulta</button>
+      </form>
+    </dialog>
+    <div>
+      <input type="text" id="procurar">
+      <button id="buscar" type="button">🔎</button>
+    </div>
+    <div id="vazia"></div>
+    <script src="./home.js"></script>
+  </body>
+</html>
